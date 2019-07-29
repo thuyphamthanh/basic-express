@@ -1,0 +1,14 @@
+.idea/
+.nyc_output
+.project
+.vscode/
+app.zip
+coverage/
+current.zip
+current/*
+dist.zip
+dist/*
+node_modules/*
+npm-debug.log
+reports/
+src/conf/local.json
