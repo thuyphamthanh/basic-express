@@ -167,12 +167,6 @@
                             colspan="1"
                             aria-label="Original Price: activate to sort column ascending"
                             style="width: 53px;">Original Price</th>
-                        <th class="sorting"
-                            tabindex="0"
-                            aria-controls="dataTables-example"
-                            rowspan="1"
-                            colspan="1"
-                            style="width: 53px;">Product Images</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -190,11 +184,37 @@
                         <td class="text-right">{{
                           product.originalPrice
                         }}</td>
+                      </tr>
+                    </tbody>
+                    <thead>
+                      <tr role="row">
+                        <th class="sorting"
+                            tabindex="0"
+                            aria-controls="dataTables-example"
+                            rowspan="1"
+                            colspan="2"
+                            style="width: 53px;">Product Images</th>
+                        <th class="sorting"
+                            tabindex="0"
+                            aria-controls="dataTables-example"
+                            rowspan="1"
+                            colspan="5"
+                            style="width: 53px;">Product Thumbnails</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      <tr role="row">
+                        {{#each product.images}}
                         <td>
-                          <img src="{{product.image}}"
-                               alt="{{product.name}}"
-                               width="100">
+                               <img src="{{this}}" alt="{{product.name}}" width="100">
                         </td>
+                        {{/each}}
+                        {{#each product.thumbnails}}
+                        <td>
+                               <img src="{{this}}" alt="{{product.name}}" width="100">
+                        </td>
+                        {{/each}}
                       </tr>
                       {{!-- {{/each }} --}}
                     </tbody>

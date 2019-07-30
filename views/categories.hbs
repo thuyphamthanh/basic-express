@@ -87,13 +87,13 @@
 
     <div id="page-wrapper">
 
-      <ol class="breadcrumb">
-        <li><a href="/admin/users">Users</a></li>
-        <li class="active">{{ user.firstName }} {{ user.lastName}}</li>
-      </ol>
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">{{ user.firstName }} {{ user.lastName}}</h1>
+
+          <div class="header-bar page-header">
+            <h1 class="">Categories List</h1>
+          </div>
+
         </div>
         <!-- /.col-lg-12 -->
       </div>
@@ -118,58 +118,17 @@
                     <thead>
                       <tr>
                     <th>ID</th>
-                    <th>Avatar</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>DoB</th>
-                    <th>Gender</th>
-                    <th>Country</th>
-                    <th>Phone Number</th>
-                    <th>Zip Code</th>
-                      </tr>
-                      <tbody>
-                        <tr role="row">
-                          <td>{{ user._id }}</td>
-                          <td><img src="{{user.avatar}}"
-                            alt="{{user.lastName}} {{user.firstName}}"
-                            width="50"></td>
-                          <td>{{user.firstName}}</td>
-                          <td>{{user.lastName}}</td>
-                          <td>{{user.dob}}</td>
-                          <td>{{user.gender}}</td>
-                          <td>{{user.country}}</td>
-                          <td>{{user.phoneNumber}}</td>
-                          <td>{{user.zipcode}}</td>
-                      </tr>
-                      </tbody>
-                    </thead>
-                    <thead>
-                      <tr>
-                           <th rowspan="1"
-                            colspan="2">User Name</th>
-                          <th rowspan="1"
-                            colspan="3">Email</th>
-                          <th rowspan="1"
-                            colspan="2">Email Verified</th>
-                          <th rowspan="1"
-                            colspan="2">Role</th>
-                      
+                    <th>Name</th>
+                    <th>Description</th>
                   </tr>
                     </thead>
                     <tbody>
-                      {{!-- {{#each users }} --}}
-                      
+                      {{#each categories }}
                       <tr role="row">
-                           <td rowspan="1"
-                            colspan="2">{{user.username}}</td>
-                         <td rowspan="1"
-                            colspan="3">{{user.email}}</td>
-                         <td rowspan="1"
-                            colspan="2">{{user.emailVerified}}</td>
-                         <td rowspan="1"
-                            colspan="2">{{user.role}}</td>
-                      </tr>
-                      {{!-- {{/each }} --}}
+                        <td>{{ _id }}</td>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                      {{/each }}
                     </tbody>
                   </table>
                 </div>
