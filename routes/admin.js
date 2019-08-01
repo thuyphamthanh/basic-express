@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
           categoriesLink: '/admin/categories',
           categoriesAmountTitle: 'Number of Categories',
           categoriesAmount: categories.body.length
-     })
+     });
 });
 
 router.get('/products', (req, res) => {
