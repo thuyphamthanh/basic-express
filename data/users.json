@@ -7,7 +7,7 @@
      },
      "body": [
        {
-         "_id": "001",
+         "userId": "001",
          "avatar": "https://api.adorable.io/avatar/nordiccoder",
          "firstName": "Nordic",
          "lastName": "Coder",
@@ -22,7 +22,7 @@
          "role": "admin"
        },
        {
-         "_id": "002",
+         "userId": "002",
          "avatar": "https://api.adorable.io/avatar/ttt",
          "firstName": "Thanh",
          "lastName": "Trần",
@@ -37,7 +37,7 @@
          "role": "instructor"
        },
        {
-         "_id": "003",
+         "userId": "003",
          "avatar": "https://api.adorable.io/avatar/ltt",
          "firstName": "Tường",
          "lastName": "Lâm Thiên",
@@ -52,7 +52,7 @@
          "role": "user"
        },
        {
-         "_id": "004",
+         "userId": "004",
          "avatar": "https://api.adorable.io/avatar/tvda",
          "firstName": "Anh",
          "lastName": "Từ Vũ Đức",
@@ -67,7 +67,7 @@
          "role": "user"
        },
        {
-         "_id": "005",
+         "userId": "005",
          "avatar": "https://api.adorable.io/avatar/nnt",
          "firstName": "Tiến",
          "lastName": "Nguyễn Như",
@@ -82,7 +82,7 @@
          "role": "user"
        },
        {
-         "_id": "006",
+         "userId": "006",
          "avatar": "https://api.adorable.io/avatar/caq",
          "firstName": "Quốc",
          "lastName": "Cao Anh",

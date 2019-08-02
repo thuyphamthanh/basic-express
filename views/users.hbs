@@ -316,7 +316,7 @@
                   <tbody>
                     {{#each users }}
                       <tr role="row">
-                        <td>{{ _id }}</td>
+                        <td>{{ userId }}</td>
                         <td><img src="{{avatar}}"
                            alt="{{lastName}} {{firstName}}"
                            width="50"></td>
@@ -326,7 +326,7 @@
                     <td>{{email}}</td>
                     <td>{{emailVerified}}</td>
                     <td>{{role}}</td>
-                    <td><a href="/admin/users/{{ _id }}">Details</a></td>
+                    <td><a href="/admin/users/{{ userId }}">Details</a></td>
                       </tr>
                       {{/each }}
                   </tbody>

@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema(
      {
-          // _id: {
-          //      type: String,
-          //      unique: true,
-          //      required: true,
-          // },
+          userId: {
+               type: String,
+               unique: true,
+               required: true,
+          },
          avatar: String,
          firstName: String,
          lastName: String,
@@ -25,6 +25,6 @@ const UserSchema = new Schema(
 
 UserSchema.virtual('fullName').get(() => {
      return this.firstName + ' ' + this.lastName;
-})
+});
 
 module.exports = mongoose.model('User', UserSchema);
