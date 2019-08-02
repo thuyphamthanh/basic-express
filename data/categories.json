@@ -7,17 +7,17 @@
      },
      "body": [
        {
-         "_id": "men",
+         "categoryId": "men",
          "name": "men",
          "description": "Men's Wear"
        },
        {
-         "_id": "women",
+         "categoryId": "women",
          "name": "women",
          "description": "Women Fashion"
        },
        {
-         "_id": "accessories",
+         "categoryId": "accessories",
          "name": "accessories",
          "description": "Bags and Accessories"
        }
