@@ -4,8 +4,9 @@ const mongoose = require('mongoose');
 const Product = require('../models/product.js');
 const User = require('../models/user.js');
 const Category = require('../models/category.js');
-
-const db = mongoose.connection;
+const userAdmin = require('./users');
+const categoryAdmin = require('./categories');
+const productAdmin = require('./product');
 
 mongoose.connect('mongodb://localhost:27017/onlinestore', {useNewUrlParser: true});
 
@@ -52,72 +53,8 @@ router.get('/', (req, res) => {
      .catch(err => console.error(err));
 });
 
-router.get('/products', (req, res) => {
-     Product.find({})
-     .exec((err, products) => {
-          if (err) console.error(err)
-          else
-               res.render('products', {products})
-     });
-});
-
-router.get('/products/:productId', (req, res) => {
-     const {productId} = req.params;
-     Product.findById(productId, (err, product) => {
-          if (err) console.error(err)
-          else
-               res.render('productDetail', {product: product});
-     })
-     ;
-});
-
-router.get('/products/find/:name', (req, res) => {
-     const {name} = req.params;
-     db.collection('products').createIndex({name: "text"});
-     Product.find({ $text: { $search: name}})
-     .exec((err, products) => {
-          if (err) {
-               res.json({
-                    messege: err
-               });
-          }
-          else {
-               res.json({
-                    messege: 'success',
-                    data: products
-               });
-          }
-     });
-});
-
-router.get('/users', (req, res) => {
-     User.find({})
-     .exec((err, users) => {
-          if (err) console.error(err)
-          else
-               res.render('users', {users: users});
-     });
-});
-
-router.get('/users/:userId', (req, res) => {
-     const {userId} = req.params;
-     User.find({
-          userId: userId
-     })
-     .exec((err, user) => {
-          if (err) console.error(err)
-          else
-               res.render('userDetail', {user: user[0]});
-     });
-});
-
-router.get('/categories', (req, res) => {
-     Category.find({})
-     .exec((err, categories) => {
-          if (err) console.error(err)
-          else
-               res.render('categories', {categories: categories});
-     })
-});
+userAdmin(router);
+productAdmin(router);
+categoryAdmin(router);
 
 module.exports = router;
